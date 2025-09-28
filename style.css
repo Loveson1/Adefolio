@@ -31,13 +31,13 @@ nav>p{
   color: rgb(183, 216, 216);
 }
 
+
 h1{
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
   font-size:65px;
   font-weight: 800;
-  color: rgb(183, 216, 216);
+  color: rgb(183, 216, 216), white;
 }
-
 
 
 
@@ -72,3 +72,9 @@ footer{
   font-size: medium;
 }
 
+
+.card{
+  border: 5px solid #ccc;
+  padding:  10px 50px;
+  margin: 100px;
+}
