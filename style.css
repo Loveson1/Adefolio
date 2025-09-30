@@ -1,6 +1,6 @@
 body {
   margin: 0 auto;
-  padding: 0px 100px;
+  padding: 100px 100px;
   background-color: #f4f4f4;
   font-size: 20px;
   background: cadetblue;
@@ -77,4 +77,84 @@ footer{
   border: 5px solid #ccc;
   padding:  10px 50px;
   margin: 100px;
+}
+
+.login{
+  border: 1px solid gray;
+  background: white;
+  width: 400px;
+  height: 500px;
+  padding: 50px;
+  margin: 0px auto;
+  border-radius: 9px;
+
+
+}
+
+.head{
+  font-size: 25px;
+  font-weight: 600;
+  list-style: auto;
+  margin-bottom: 5px;
+  color: black;
+  font-family: sans-serif;
+}
+
+.subhead{
+  font-size: small;
+  color: gray;
+  margin-bottom: 40px ;
+}
+
+label{
+  font-size: 16px;
+  color:gray ;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+input{
+display: block;
+width: 90%;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-bottom: 30px;
+padding: 15px;
+
+}
+
+.reset{
+  color: gray;
+  margin-bottom: 30px;
+  font-size: 14px;
+  text-align: right;
+}
+
+
+button{
+  border-radius: 50px;
+  display: block;
+  width: 100%;
+  margin: 20px  auto;
+  padding: 15px;
+  background: rgb(3, 152, 142);
+  border: none;
+  color: white;
+  margin-bottom: 40px;
+
+}
+
+.signup{
+   color: gray;
+   font-size: 14px;
+  text-align: center;
+}
+
+
+
+span{
+  font-weight: bold;
+  font-size: 14px;
+  color:  rgb(3, 152, 142);
+  text-decoration: underline;
 }
