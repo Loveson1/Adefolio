@@ -1,77 +1,184 @@
 
-let a = 10;
-let b = 5;
-let c = 2;
-let isAdmin = true;
-let names = "John";
+//  Assignment 1
 
-// 1. Addition
-console.log(a + b); 
+// let a = 10;
+// let b = 5;
+// let c = 2;
+// let isAdmin = true;
+// let names = "John";
 
-// 2. Subtraction
-console.log(a - b); 
+// // 1. Addition
+// console.log(a + b);
 
-// 3. Multiplication
-console.log(a * b);
+// // 2. Subtraction
+// console.log(a - b);
 
-// 4. Division
-console.log(a / b); 
+// // 3. Multiplication
+// console.log(a * b);
 
-// 5. Modulus
-console.log(a % b); 
+// // 4. Division
+// console.log(a / b);
 
-// 6. Exponentiation
-console.log(a ** c); 
+// // 5. Modulus
+// console.log(a % b);
 
-// 7. Assignment
-let x = 5;
-x += a;
-console.log(x); 
+// // 6. Exponentiation
+// console.log(a ** c);
 
-// 8. Comparison
-console.log(a > b);
+// // 7. Assignment
+// let x = 5;
+// x += a;
+// console.log(x);
 
-// 9. Equality
-console.log(a === 10); 
+// // 8. Comparison
+// console.log(a > b);
 
-// 10. Inequality
-console.log(a !== b); 
+// // 9. Equality
+// console.log(a === 10);
 
-// 11. Logical AND
-console.log(isAdmin && true); 
+// // 10. Inequality
+// console.log(a !== b);
 
-// 12. Logical OR
-console.log(isAdmin || false);
+// // 11. Logical AND
+// console.log(isAdmin && true);
 
-// 13. Logical NOT
-console.log(!isAdmin); 
+// // 12. Logical OR
+// console.log(isAdmin || false);
 
-// 14. String concatenation
-console.log(names + " is admin: " + isAdmin); 
+// // 13. Logical NOT
+// console.log(!isAdmin);
 
-// 15. Ternary operator
-console.log(a > b ? "a is greater" : "b is greater");
+// // 14. String concatenation
+// console.log(names + " is admin: " + isAdmin);
 
-// 16. Greater than or equal
-console.log(a >= b); 
+// // 15. Ternary operator
+// console.log(a > b ? "a is greater" : "b is greater");
 
-// 17. Less than or equal
-console.log(b <= a); 
+// // 16. Greater than or equal
+// console.log(a >= b);
 
-// 18. Increment
-let y = 5;
-y++;
-console.log(y); 
+// // 17. Less than or equal
+// console.log(b <= a);
 
-// 19. Decrement
-let z = 5;
-z--;
-console.log(z); 
+// // 18. Increment
+// let y = 5;
+// y++;
+// console.log(y);
 
-// 20. Multiplication assignment
-let m = 5;
-m *= a;
-console.log(m); 
+// // 19. Decrement
+// let z = 5;
+// z--;
+// console.log(z);
+
+// // 20. Multiplication assignment
+// let m = 5;
+// m *= a;
+// console.log(m);
+
+
+// Assignment 2
+
+
+// Students List
+let studentList = [
+  { name: "Ade", score: 97 },
+  { name: "Ola", score: 53 },
+  { name: "Caroline", score: 72 },
+  { name: "Temi", score: 47 },
+  { name: "Barndas", score: 12 },
+];
 
 
 
+// Students name checker
+function getName() {
+  console.log("All Student's Name");
+  studentList.map((index) => {
+    console.log(index.name);
+  });
+}
+
+
+// Student who passed checker
+function getPassed() {
+  console.log("Students who Passed");
+  const passedStudents = studentList.filter((index) => index.score >= 50);
+  passedStudents.map((index) => {
+    console.log(index.name + " : " + index.score + "%");
+  });
+}
+
+
+// Final result checker
+
+function getResult() {
+  console.log(" Student's FInal Result");
+  for (let result of studentList) {
+    let score = result.score;
+
+    if (score >= 80) {
+      console.log(
+        " Name : " +
+          result.name +
+          " - Score: " +
+          result.score +
+          "%" +
+          " - Grade: A"
+      );
+    } else if (score >= 60) {
+      console.log(
+        " Name : " +
+          result.name +
+          " - Score: " +
+          result.score +
+          "%" +
+          " - Grade: B"
+      );
+    } else if (score >= 50) {
+      console.log(
+        " Name : " +
+          result.name +
+          " - Score: " +
+          result.score +
+          "%" +
+          " - Grade: C"
+      );
+    } else if (score >= 45) {
+      console.log(
+        " Name : " +
+          result.name +
+          " - Score: " +
+          result.score +
+          "%" +
+          " - Grade: D"
+      );
+    } else {
+      console.log(
+        " Name : " +
+          result.name +
+          " - Score: " +
+          result.score +
+          "%" +
+          " - Grade: F"
+      );
+    }
+  }
+}
+
+// Average Score Calculator
+
+function averageScore() {
+  const scoreArr = studentList.map((index) => index.score);
+
+  let totalScore = scoreArr.reduce((acc, num) => acc + num, 0);
+  let averageScore = totalScore / scoreArr.length;
+  console.log(`Average Score
+Student Average Score is : ${averageScore}%`);
+}
+
+
+//Invoking each function
+getName();
+getPassed();
+getResult();
+averageScore();
