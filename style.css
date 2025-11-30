@@ -1,160 +1,191 @@
 body {
-  margin: 0 auto;
-  padding: 100px 100px;
-  background-color: #f4f4f4;
-  font-size: 20px;
-  background: cadetblue;
-  color: black;
-  width:700px;
-  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "League Spartan";
+  margin: 0;
+  padding: 80px;
+  background-color: white;
+  position: relative;
 }
 
-
-nav{
-display: flex;
-flex-direction: row;
-margin: 0;
-justify-content: space-between;
-align-items: center;
-border-bottom:1px solid rgb(19, 52, 53); ;
+h1 {
+  font-size: 40px;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
 }
 
-nav>ul{
-  list-style: none ;
-  display: flex;
-flex-direction: row;
-gap: 20px;
+p {
+  font-size: 15px;
+  color: white;
 }
 
-nav>p{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: rgb(183, 216, 216);
+.bold {
+  font-weight: bold;
+  line-height: 0.5;
 }
 
-
-h1{
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
-  font-size:65px;
-  font-weight: 800;
-  color: rgb(183, 216, 216), white;
+.magenta {
+  color: hsl(300, 43%, 22%);
+}
+.pink {
+  color: hsl(333, 80%, 67%);
 }
 
-
-
-h3, h2{
-  font-family: sans-serif;
-  color: rgb(19, 52, 53);
-}
-
-h3{
-  font-weight: 100;
-}
-
-ul,ol, p{
-  font-family: sans-serif;
-  color: rgb(40, 39, 39);
+.subhead {
+  opacity: 0.7;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  max-width: 350px;
   line-height: 1.5;
 }
 
-
-.details{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+.flex-sm {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
-section{
-  margin-block: 70px;
+.flex-col-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.flex {
+  display: flex;
 }
 
-footer{
-  text-align: center;
-  font-size: medium;
+.flex-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:15px;
 }
 
+.rating {
+  background-color: hsl(300, 24%, 96%);
+padding-block: 1px;
+  border-radius: 5px;
+  padding-inline: 20px;
 
-.card{
-  border: 5px solid #ccc;
-  padding:  10px 50px;
-  margin: 100px;
+  max-width: 320px;
+  width: 90%;
 }
 
-.login{
-  border: 1px solid gray;
-  background: white;
-  width: 400px;
-  height: 500px;
-  padding: 50px;
-  margin: 0px auto;
-  border-radius: 9px;
-
-
+.margin-sm {
+  margin-left: 100px;
 }
 
-.head{
-  font-size: 25px;
-  font-weight: 600;
-  list-style: auto;
-  margin-bottom: 5px;
-  color: black;
-  font-family: sans-serif;
+.margin-lg {
+  margin-left: 200px;
 }
 
-.subhead{
-  font-size: small;
-  color: gray;
-  margin-bottom: 40px ;
+.m-bottom {
+  margin-bottom: 20px;
 }
 
-label{
-  font-size: 16px;
-  color:gray ;
-  font-family: sans-serif;
-  font-weight: 500;
+.m-bottom-lg {
+  margin-top: 40px;
 }
 
-input{
-display: block;
-width: 90%;
-border: 1px solid #ccc;
-border-radius: 5px;
-margin-bottom: 30px;
-padding: 15px;
-
+.m-top-sm {
+  margin-top: 30px;
+}
+.m-top-lg {
+  margin-top: 60px;
 }
 
-.reset{
-  color: gray;
-  margin-bottom: 30px;
-  font-size: 14px;
-  text-align: right;
+.review {
+  background-color: hsl(300, 43%, 22%);
+  padding-inline: 20px;
+  padding-block: 30px;
+  border-radius: 5px;
+  max-width: 280px;
 }
 
 
-button{
-  border-radius: 50px;
-  display: block;
-  width: 100%;
-  margin: 20px  auto;
-  padding: 15px;
-  background: rgb(3, 152, 142);
-  border: none;
-  color: white;
-  margin-bottom: 40px;
+img{
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.deco-top{
+position: absolute;
+top:0px ;
+left: 0px;
 
 }
 
-.signup{
-   color: gray;
-   font-size: 14px;
-  text-align: center;
+.deco-bottom{
+position: absolute;
+bottom:0px ;
+right: 0px;
+
+}
+
+.mobile-deco-top{
+display: none;
+
+}
+
+.mobile-deco-bottom{
+display: none;
+
+}
+
+
+@media (max-width:600px ){
+
+    body{
+        padding: 20px;
+    }
+h1, p{
+    text-align: center;
+}
+.flex-btw{
+    flex-direction: column;
+}
+.rating{
+    flex-direction: column;
+    gap:0px;
+    padding-block: 10px;
+    margin-left: 0px;
+    width: 90%;
+    max-width:280px ;
+
+}
+
+.review{
+    margin-top: 0px ;
+}
+.review-text{
+    text-align: left;
+}
+
+.mobile-deco-top{
+position: absolute;
+top:0px ;
+left: 0px;
+
+}
+
+.mobile-deco-bottom{
+position: absolute;
+bottom:0px ;
+right: 0px;
+
+}
+
+.deco-top{
+display: none;
+
+}
+
+.deco-bottom{
+display: none;
+
+}
+
 }
 
 
 
-span{
-  font-weight: bold;
-  font-size: 14px;
-  color:  rgb(3, 152, 142);
-  text-decoration: underline;
-}
